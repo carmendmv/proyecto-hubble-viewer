@@ -1,11 +1,14 @@
 import React from "react";
-import { FaRocket } from "react-icons/fa";
 
 export default function Navbar() {
   return (
-    <nav className="bg-gray-900 p-4 text-white flex items-center">
-      <FaRocket className="mr-2" />
-      <h1 className="text-xl">Explorador del Universo</h1>
+    <nav className="fixed top-0 left-0 w-full bg-black py-6 border-b border-white shadow-lg z-50">
+        <div className="container mx-auto flex justify-center relative">
+            <h1 className="text-3xl font-bold text-white uppercase tracking-widest">
+                Hubble Gallery
+            </h1>
+        </div>
     </nav>
   );
 }
+
