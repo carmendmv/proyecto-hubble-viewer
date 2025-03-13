@@ -54,7 +54,7 @@ const NasaImage = () => {
       </nav>
 
       {/* HERO FORM */}
-      <div className="fixed top-50 left-0 w-full flex flex-col items-center z-50">
+      <div className="top-50 left-0 w-full flex flex-col items-center z-50">
         <motion.form
           onSubmit={handleSearch}
           className="flex flex-col space-y-4 w-full max-w-lg bg-white/10 p-4 rounded-lg shadow-md"
