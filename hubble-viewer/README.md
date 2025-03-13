@@ -1,6 +1,6 @@
 # Hubble Viewer
 
-Hubble Viewer es una aplicación web interactiva que muestra imágenes y datos del Telescopio Espacial Hubble, consumiendo la API de la NASA. La interfaz está diseñada para ser responsive y dinámica, utilizando React con Vite, y se beneficia de animaciones con Framer Motion y estilos con Tailwind CSS (y Bootstrap en algunos casos).
+Hubble Viewer es una aplicación web interactiva que muestra imágenes y datos del Telescopio Espacial Hubble, consumiendo la API de la NASA y Nasa Image consumiendo la API de la NASA como buscador de imagenes. Las interfacs están diseñadas para ser responsives y dinámicas, utilizando React con Vite, y se benefician de animaciones con Framer Motion y estilos con Tailwind CSS (y Bootstrap en algunos casos).
 
 ## Funcionalidades
 
