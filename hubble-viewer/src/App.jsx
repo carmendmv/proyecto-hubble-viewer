@@ -1,33 +1,18 @@
-import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Gallery from "./components/Gallery";
-import axios from "axios";
-import "./App.css";
+import Home from "./components/Home";
+import NasaImage from "./components/NasaImage";
+import HubbleGallery from "./components/HubbleGallery";
 
-
-const API_URL = "https://images-api.nasa.gov/search?q=hubble";
-
-export default function App() {
-  const [images, setImages] = useState([]);
-
-  useEffect(() => {
-    axios.get(API_URL).then((response) => {
-      const items = response.data.collection.items;
-      const formattedImages = items.map((item) => item.links?.[0]?.href);
-      setImages(formattedImages);
-    });
-  }, []);
-
+function App() {
   return (
-    <div className="relative">
-      <Navbar />
-      <div className="relative z-10 p-10 text-center text-white">
-        <h1 className="text-4xl font-bold">Hubble Space Images</h1>
-      </div>
-      <div className="relative z-20">
-        <Gallery />
-      </div>
-    </div>
+    <Router basename="/proyecto-hubble-viewer">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/nasa-images" element={<NasaImage />} />
+        <Route path="/hubble-gallery" element={<HubbleGallery />} />
+      </Routes>
+    </Router>
   );
 }
+
+export default App;
