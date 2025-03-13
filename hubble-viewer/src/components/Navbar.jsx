@@ -8,7 +8,6 @@ export default function Navbar() {
                 Hubble Gallery
             </h1>
         </div>
-    </nav>
+  </nav>
   );
 }
-

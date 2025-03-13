@@ -25,23 +25,32 @@ export default function Gallery() {
 
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-      className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4 mt-5 pt-24"
-    >
-      {error && <p className="text-red-500">{error}</p>}
-      {images.map((img) => (
-        <motion.div
-          key={img.id}
-          whileHover={{ scale: 1.05 }}
-          className="bg-black text-white p-3 rounded-lg shadow-lg"
-        >
-          <img src={img.imageUrl} alt={img.title} className="max-w-full h-auto mx-auto" />
-          <h3 className="mt-2 text-center text-lg">{img.title}</h3>
-        </motion.div>
-      ))}
-    </motion.div>
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ duration: 1 }}
+    className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-4 mt-10 pt-24 relative"
+  >
+    {error && <p className="text-red-500">{error}</p>}
+    {images.map((img) => (
+      <motion.div
+        key={img.id}
+        className="bg-black text-white p-4 rounded-lg shadow-lg flex flex-col items-center w-fit h-fit"
+        whileHover={{ scale: 1.1 }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
+      >
+        <img
+          src={img.imageUrl}
+          alt={img.title}
+          className="w-auto h-auto max-w-full max-h-[400px] object-contain mx-auto rounded-lg"
+        />
+        <p className="mt-2 text-sm text-center">{img.title}</p>
+      </motion.div>
+    ))}
+
+    <h3 className="absolute bottom-7 right-7 text-white flex flex-col text-lg">
+        <span>Carmen de Miguel Velázquez  © Hubble Gallery </span>
+      
+    </h3>
+  </motion.div>
   );
 }
-
