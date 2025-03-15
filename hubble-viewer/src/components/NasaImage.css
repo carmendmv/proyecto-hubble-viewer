@@ -2,11 +2,12 @@
     margin: 0;
     padding: 0;
     padding-top: 150px;
-    background-image: url("/fondoImages.jpg"); 
-    
+    background-image: url("/fondoImages.jpg"); /* Asegúrate que esta ruta sea correcta */
+  
     background-position: center; /* Centra la imagen */
     background-repeat: no-repeat; /* Evita repeticiones */
     background-attachment: fixed; /* Fija la imagen mientras se desplaza */
     color: white;
     font-family: "Arial", sans-serif;
-}
+  }
+  
