@@ -1,11 +1,11 @@
 .gallery-container {
-    margin: 0;
-    padding:0;
-    background-image: url("/fondo.jpg"); 
-    background-size: auto;  
-    background-position: top left;  
-    background-repeat: repeat; 
-    background-attachment: scroll;  
-    color: white;
-    font-family: "Arial", sans-serif;
-  }
+  margin: 0;
+  padding: 0;
+  background-image: url("/proyecto-hubble-viewer/fondo.jpg"); /* Ruta corregida */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+  font-family: "Arial", sans-serif;
+}
